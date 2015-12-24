@@ -1,0 +1,164 @@
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* End Box Sizing */
+
+/* http://mystrd.at/modern-clean-css-sticky-footer */
+html {
+    position:relative;
+    min-height:100%;
+}
+
+.jumbotron {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	box-shadow: 10px 10px 5px #888888; 
+}
+
+#jumbotron {
+	margin-top: 30px;
+}
+
+#jumbo {
+	color:red;
+	font-family:"Times New Roman", Times, serif;
+}
+
+#sub {
+	color:#158cba;
+	font-family:"Source Sans Pro",​Arial,​sans-serif​, "Helvevetica";
+}
+
+#middle, #bottom  {
+	font-size:1.5em; 
+}
+
+body {
+    margin:0 0 100px; /* bottom = footer height */
+	font-size: 2em;
+	line-height: 2;
+	font-weight: 900;
+}
+
+#title{
+    text-decoration: underline;
+}
+
+.row-to-play {
+	border:3px solid grey;
+	border-radius: 20px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.row-to-play:hover {
+	background-color: yellow;
+}
+
+.imgthumbnail {
+	border-radius: 20px; 
+}
+
+/*
+footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:30px;
+    width:100%;
+    background-color:#ccc;
+    text-align:center;
+    padding:5px;
+}*/
+
+/* End Sticky Footer */
+
+/*
+#box1, #box2, #box3, #box4 {
+	border: solid grey 1px;
+	border-radius: 15px;
+}
+
+#box2, #box4 {
+	margin-right:1px;
+	padding-right:1px;
+}
+
+#box3, #box1 {
+		margin-left:1px;
+		padding-left:1px;
+		padding-right:1px;
+}
+
+#jumbo {
+	padding:30px;
+}
+*/
+
+#box4, #box2 {
+	border-right: solid grey 1px;
+}
+
+section, header, nav {
+    padding-left:5px;
+    padding-top:5px;
+}
+
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li {
+    display:inline;
+    background-color:#eee;
+    padding:5px;
+    margin-right:5px;
+}
+
+/*----------------------------------------------------
+Forms
+-----------------------------------------------------*/
+label {
+    margin-top:10px;
+    margin-bottom:0;
+    display:block;
+}
+
+.checkboxLabel, .radioLabel {
+    display:inline;
+}
+
+input[type=text],input[type=password],select {
+    width:450px;
+    font-size:20px;
+}
+
+ul.errors {
+    color:red;
+    margin:0;
+    margin-top:5px;
+    padding:0;
+    list-style-type:none;
+}
+
+
+
+/*----------------------------------------------------
+Flash message
+-----------------------------------------------------*/
+.flash_message {
+    width:100%;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:yellow;
+    font-weight:bold;
+}
