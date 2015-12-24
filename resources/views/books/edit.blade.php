@@ -1,12 +1,13 @@
 @extends('layouts.master')
 
 @section('title')
-    Update the Laravel Video Book
+    Update the Laravel Video Book 
 @stop
 
 
 @section('content')
-	<div class="jumbotron">
+
+				<div class="jumbotron">
 				<div class="row">
 				
 				<div class="col-sm-6">
@@ -21,7 +22,7 @@
 					<input type='hidden' name='id' value='{{ $book->id }}'>
 
 					<div class='form-group'>
-						<label>* Titles (e.g., mp4 file name):</label>
+						<label>* Media Title:</label>
 						<input
 							type='text'
 							id='title'
@@ -31,7 +32,7 @@
 					</div>
 					
 				    <div class='form-group'>
-						<label>* Link:</label>  
+						<label>* Media File Name with Extension:</label>  
 						<input
 							type='text'
 							id='link'
@@ -41,7 +42,7 @@
 					</div>
 					
 				    <div class='form-group'>
-						<label>* Description:</label>  
+						<label>* Media Description:</label>  
 						<input
 							type='text'
 							id='description'
@@ -51,7 +52,7 @@
 					</div>	
 
 				    <div class='form-group'>
-						<label>* Thumbnail:</label>   
+						<label>* Thumbnail File Name:</label>   
 						<input
 							type='text'
 							id='thumbnail'
@@ -61,7 +62,7 @@
 					</div>						
 
 					<div class='form-group'>
-						<label for='author'>* Content Reviewer, Contributor, Author:</label>
+						<label for='author'>* Media Type:</label>
 						<select name='author' id='author'>
 							@foreach($authors_for_dropdown as $author_id => $author_name)
 
@@ -72,35 +73,6 @@
 						</select>
 					</div>
 
-					<div class='form-group'>
-						<label for='title'>* Thumbnail Image (e.g., "img/thumbnail.png"):</label>
-						<input
-							type='text'
-							id='cover'
-							name="cover"
-							value='{{$book->cover}}'
-							>
-					</div>
-
-					<div class='form-group'>
-						<label for='Published'>Percent Complete (0 to 100):</label>
-						<input
-							type='text'
-							id='published'
-							name="published"
-							value='{{$book->published}}'
-							>
-					</div>
-
-					<div class='form-group'>
-						<label for='title'>* Video Book Description:</label>
-						<input
-							type='text'
-							id='purchase_link'
-							name='purchase_link'
-							value='{{$book->purchase_link}}'
-							>
-					</div>
 				</div><!-- col-sm-6-->
 				<div class="col-sm-6">
 					<div class='form-group'>

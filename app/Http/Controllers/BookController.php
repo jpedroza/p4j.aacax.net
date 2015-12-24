@@ -72,14 +72,21 @@ class BookController extends Controller {
 
         $book = \App\Book::find($request->id);
 
+		$this->validate(
+            $request,
+            [
+                'title' => 'required|min:5',
+				'link' => 'required|min:5',
+                'description' => 'required|min:5',
+				'thumbnail' => 'required|min:5',		
+            ]
+        );
+		
         $book->title = $request->title;
 		$book->link = $request->link;
 		$book->description = $request->description;
 		$book->thumbnail = $request->thumbnail;
         $book->author_id = $request->author;
-        $book->cover = $request->cover;
-        $book->published = $request->published;
-        $book->purchase_link = $request->purchase_link;
 
         $book->save();
 
@@ -91,7 +98,7 @@ class BookController extends Controller {
         }
         $book->tags()->sync($tags);
 
-        \Session::flash('flash_message','Your book was updated.');
+        \Session::flash('flash_message','The Selected Media was Updated.');
         return redirect('/books/edit/'.$request->id);
 
     }
@@ -167,7 +174,7 @@ class BookController extends Controller {
         $book = \App\Book::find($book_id);
 
         if(is_null($book)) {
-            \Session::flash('flash_message','Book not found.');
+            \Session::flash('flash_message','Media not found.');
             return redirect('\books');
         }
 
