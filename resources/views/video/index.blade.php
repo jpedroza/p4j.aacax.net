@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-		<div class="jumbotron" id="jumbo">
+		<div class="jumbotron" id="jumbo"> 
 			<h2 id="title">App Title: Laravel Video Books </h2>
 			<h2 id="title">Purpose: A Functional Video Repository</h2>
 			<h2 id="title">Instructions: Select a video from the bottom-left list click to select and press Play.</h2>
@@ -83,7 +83,5 @@
 					</div><!-- end of col-sm-6 -->	  
 				</div><!-- end of row -->
 		</div><!-- end of jumbotron --> 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-		<script type="text/javascript" src="js/jquery.webticker.js"></script>
 
 @stop

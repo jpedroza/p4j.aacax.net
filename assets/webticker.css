@@ -2,7 +2,7 @@
 
 .tickeroverlay-left{
 	
-background-image:url('img/left.png');
+background-image:url('left.png');
 	
 display:block;
 	
@@ -25,7 +25,7 @@ left:-2px;
 
 .tickeroverlay-right{
 	
-background-image:url('img/right.png');
+background-image:url('right.png');
 	
 display:block;
 	

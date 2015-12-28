@@ -1,0 +1,82 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.webticker.js"></script>
+
+
+<link rel="stylesheet" href="assets/webticker.css" type="text/css" media="screen"> 
+<script type="text/javascript">
+$(function(){
+	$("#webticker").webTicker();
+	$("#webticker2").webTicker({duplicate:true, speed: 40, direction: 'right', rssurl:'http://yourwebsite.com/rss/', rssfrequency:1, startEmpty:false, hoverpause:false});	
+	
+	$("#stop").click(function(){
+		$("#webticker").webTicker('stop');
+	});
+	
+	$("#continue").click(function(){
+		$("#webticker").webTicker('cont');
+	});
+	$("#update").click(function(){
+		$("#webticker").webTicker('update','<li id="item1">First News Item Updated</li><li id="item3">Third News Item Updated</li><li id="item4">Fourth News Item Updated</li><li id="item9">Ninth News Item Updated</li><li id="itemnew1">This is New Item 1</li><li  id="itemnew2">This is New Item 2</li><li  id="itemnew3">This is New Item 3</li><li  id="itemnew4">This is New Item 4</li>','swap');
+	});
+	$("#stop2").click(function(){
+		$("#webticker2").webTicker('stop');
+	});
+	
+	$("#continue2").click(function(){
+		$("#webticker2").webTicker('cont');
+	});
+});
+</script>
+
+
+
+</head>
+<body style='margin-left:100px'>
+<h1>Scrolling Web Ticker</h1>
+<!-- first ticker -->
+<ul id="webticker" >	
+	<li id='item1'>
+		My First News Item
+	</li>
+	<li id='item2'>
+		My Second News Item
+	</li>
+	<li id='item3'>
+		My Third News Item
+	</li>
+	<li id='item4'>
+		My Fourth News Item
+	</li>
+	<li id='item5'>
+		My Fifth News Item
+	</li>
+	<li id='item6'>
+		My Sixth News Item
+	</li>
+	<li id='item7'>
+		My Seventh News Item
+	</li>
+	<li id='item8'>
+		My Eighth News Item
+	</li>
+	<li id='item9'>
+		My Ninth News Item
+	</li>
+	<li id='item10'>
+		My Tenth News Item
+	</li>
+</ul>
+
+
+
+</div>
+
+
+</body></html>

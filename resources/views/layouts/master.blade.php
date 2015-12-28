@@ -17,7 +17,8 @@
     <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css' rel='stylesheet'>
 
     <link href='/css/style.css' rel='stylesheet'> 
-	<link rel="stylesheet" href="webticker.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/webticker.css" type="text/css" media="screen">
+
 
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
