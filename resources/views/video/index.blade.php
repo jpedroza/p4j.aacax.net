@@ -10,7 +10,7 @@
 			<h2 id="title">Purpose: A Functional Video Repository</h2>
 			<h2 id="title">Instructions: Select a video from the bottom-left list click to select and press Play.</h2>
 			<p id="middle">
-				This Web Application is a functional prototype to assist those individuals like myself with a not so good memory.    
+				This Web Application is a functional prototype to assist those who would like to store and play media from a personal repository.    
 				This small video repository can be used as a video diary, a media album, a video library, etc.
 			</p>
 		</div><!-- end of top jumbotron -->
