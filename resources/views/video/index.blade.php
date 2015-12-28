@@ -46,7 +46,7 @@
 											name='videoid'
 											class='input-field-splash'
 											style="width: 140%;"
-											value='{{ 'This is the id of the Video Book' }}' 
+											value='{{ '1.mp4' }}' 
 										>
 									</div>
 								

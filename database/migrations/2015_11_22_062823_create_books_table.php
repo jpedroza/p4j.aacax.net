@@ -24,20 +24,12 @@ class CreateBooksTable extends Migration
 
             # The rest of the fields...
             $table->string('title');
-            $table->integer('page_count');
-            $table->integer('published');
-            $table->string('cover');
-            $table->string('purchase_link');
-            
-            // No longer need `author` now that we've
-            // implemented the One To Many author relationshp
-            //$table->string('author');
-
-            # FYI: We're skipping the 'tags' field for now; more on that later.
-
+            $table->string('link');
+			$table->string('description');
+			$table->string('thumbnail');
         });
     }
-
+	
     /**
      * Reverse the migrations.
      *
@@ -47,4 +39,5 @@ class CreateBooksTable extends Migration
     {
         Schema::drop('books');
     }
+	
 }

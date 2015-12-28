@@ -3,26 +3,24 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAuthorsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
-        Schema::create('authors', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
 
             $table->increments('id');
             $table->timestamps();
 
             # The rest of the fields...
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->integer('birth_year');
-            $table->string('bio_url');
-
+            $table->string('title');
+            $table->string('comment');
+			$table->string('email_address_of_commenter');
         });
     }
 
@@ -33,6 +31,6 @@ class CreateAuthorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('authors');
+        Schema::drop('comments');
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Contribute a Laravel Video Book for Review and Syndication
+    Request for a Particular Media Product
 @stop
 
 {{--
@@ -19,7 +19,7 @@ such as a page specific styesheets.
 	<div class="jumbotron">
 			<div class="row">
 
-				<h1>Request a Specific Laravel Video Book</h1>
+				<h1>Request a Specific Laravel Media Product</h1>
 
 				@include('errors')
 
@@ -47,7 +47,7 @@ such as a page specific styesheets.
 							>
 					</div>
 	
-					<button type="submit" class="btn btn-primary">Request a Video Book on a Specific Topic</button>
+					<button type="submit" id="sub">Request a Specific Media Product</button>
 				</form>
 			</div><!-- end of row -->
 	</div><!-- end of jumbotron -->

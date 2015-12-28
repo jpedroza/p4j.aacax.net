@@ -34,13 +34,13 @@ class BookController extends Controller {
         $book = \App\Book::with('tags')->find($id);
 
         if(is_null($book)) {
-            \Session::flash('flash_message','Book not found.');
+            \Session::flash('flash_message','Media not found.');
             return redirect('\books');
         }
 
-        # Get all the possible authors so we can build the authors dropdown in the view
-        $authorModel = new \App\Author();
-        $authors_for_dropdown = $authorModel->getAuthorsForDropdown();
+        # Get all the possible formats so we can build the formats dropdown in the view
+        $formatModel = new \App\Format();
+        $formats_for_dropdown = $formatModel->getFormatsForDropdown();
 
         # Get all the possible tags so we can include them with checkboxes in the view
         $tagModel = new \App\Tag();
@@ -58,7 +58,7 @@ class BookController extends Controller {
         return view('books.edit')
             ->with([
                 'book' => $book,
-                'authors_for_dropdown' => $authors_for_dropdown,
+                'formats_for_dropdown' => $formats_for_dropdown,
                 'tags_for_checkbox' => $tags_for_checkbox,
                 'tags_for_this_book' => $tags_for_this_book,
             ]);
@@ -86,7 +86,7 @@ class BookController extends Controller {
 		$book->link = $request->link;
 		$book->description = $request->description;
 		$book->thumbnail = $request->thumbnail;
-        $book->author_id = $request->author;
+        $book->format_id = $request->format;
 
         $book->save();
 
@@ -108,15 +108,15 @@ class BookController extends Controller {
      */
     public function getCreate() {
 
-        $authorModel = new \App\Author();
-        $authors_for_dropdown = $authorModel->getAuthorsForDropdown();
+        $formatModel = new \App\Format();
+        $formats_for_dropdown = $formatModel->getFormatsForDropdown();
 
         # Get all the possible tags so we can include them with checkboxes in the view
         $tagModel = new \App\Tag();
         $tags_for_checkbox = $tagModel->getTagsForCheckboxes();
 
         return view('books.create')
-            ->with('authors_for_dropdown',$authors_for_dropdown)
+            ->with('formats_for_dropdown',$formats_for_dropdown)
             ->with('tags_for_checkbox',$tags_for_checkbox);
     }
 

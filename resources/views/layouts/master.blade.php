@@ -18,9 +18,10 @@
 
     <link href='/css/style.css' rel='stylesheet'> 
 
+
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
-
+	
 </head>
 <body>
 	<div class="container">
@@ -42,15 +43,15 @@
 							<ul>
 								@if(Auth::check())
 									<li ><a href='/'><button>Go To The Main Page</button></a></li>
-									<li><a href='/books/create'><button>Request a Specific Laravel Video Book</button></a></li>
-									<li><a href='/logout'><button>Log Out Of Your Account {{ $user->name }} ?</button></a></li>
+									<li><a href='/books/create'><button>Request a Laravel Media Product</button></a></li>
+									<li><a href='/logout'><button>Log Out Of Your Account {{ $user->name }}?</button></a></li> 
 								@else
 									<li><a href='/'><button>Go To The Main Page</button></a></li>
-									<li><a href='/login'><button>Log In To Manage Your Files/Make Requests</button></a></li>
-									<li><a href='/register'><button>Request a Specific Laravel Video Book</button></a></li>
+									<li><a href='/login'><button>Log In To Edit Metadata/Make Requests</button></a></li>
+									<li><a href='/register'><button>Request a Laravel Media Product</button></a></li>
 								@endif
 							</ul>
-						</nav>
+						</nav>		
 
 					</div><!-- end of head jumbotron -->
 			</section>
@@ -72,11 +73,13 @@
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-			<script src="js/playvideosonclick.js"></script>
+			<!-- <script src="js/playvideosonclick.js"></script> -->
+
 
 			{{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
 			@yield('body')
 	</div><!-- end of class container -->
 	<script src="js/playvideosonclick.js"></script> 
+
 </body>
 </html>

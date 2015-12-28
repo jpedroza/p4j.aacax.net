@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    public function author() {
-        # Book belongs to Author
+    public function format() {
+        # Book belongs to Format
         # Define an inverse one-to-many relationship.
-        return $this->belongsTo('\App\Author');
+        return $this->belongsTo('\App\Format');
     }
 
     public function user() {

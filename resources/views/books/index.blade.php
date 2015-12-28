@@ -18,7 +18,6 @@
 								<h2>{{ $book->title }}</h2>
 								<span><a href='/books/edit/{{$book->id}}'><button>Edit Metadata</button></a></span>
 								<span><a href='/books/confirm-delete/{{$book->id}}'><button>Delete Record.</button></a><br></span>	 
-								<!-- <img class="imgthumbnail" src='img/{{ $book->cover }}'> just in case, need a better layout -->
 							</div>
 						@endforeach
 					</div><!-- end of col-sm-4 -->

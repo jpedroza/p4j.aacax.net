@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TagsTableSeeder extends Seeder
+class TagsTableSeeder extends Seeder 
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        $data = ['novel','fiction','classic','wealth','women','autobiography','nonfiction'];
+        $data = ['php','mysql','js','html','forms','front-end','css'];
 
         foreach($data as $tagName) {
             $tag = new \App\Tag();

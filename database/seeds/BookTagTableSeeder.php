@@ -13,9 +13,9 @@ class BookTagTableSeeder extends Seeder
     {
 
         $books =[
-            'The Great Gatsby' => ['novel','fiction','classic','wealth'],
-            'The Bell Jar' => ['novel','fiction','classic','women'],
-            'I Know Why the Caged Bird Sings' => ['autobiography','nonfiction','classic','women']
+            'screen cast' => ['php','html','css','mysql'],
+            'pdf cast' => ['php','html','css','js'],
+            'flash cast' => ['forms','front-end','css','js']
         ];
 
         foreach($books as $title => $tags) {

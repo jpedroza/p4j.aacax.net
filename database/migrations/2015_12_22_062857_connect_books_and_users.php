@@ -17,7 +17,7 @@ class ConnectBooksAndUsers extends Migration
 			# Add a new INT field called `user_id` that has to be unsigned (i.e. positive)
             $table->integer('user_id')->unsigned();
 
-			# This field `user_id` is a foreign key that connects to the `id` field in the `authors` table
+			# This field `user_id` is a foreign key that connects to the `id` field in the `formats` table
             $table->foreign('user_id')->references('id')->on('users');
 
         });

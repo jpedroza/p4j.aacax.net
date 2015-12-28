@@ -27,7 +27,7 @@ class BookController extends Controller {
         $book = \App\Book::with('tags')->find($id);
 
         if(is_null($book)) {
-            \Session::flash('flash_message','Book not found.');
+            \Session::flash('flash_message','Media not found.');
             return redirect('\books');
         }
 
@@ -69,8 +69,6 @@ class BookController extends Controller {
 		$book->link = $request->link; //the name of the mp4 file
         $book->author_id = $request->author;
         $book->cover = $request->cover;
-        $book->published = $request->published;
-        $book->purchase_link = $request->purchase_link;
 
         $book->save();
 
@@ -82,7 +80,7 @@ class BookController extends Controller {
         }
         $book->tags()->sync($tags);
 
-        \Session::flash('flash_message','Thanks fo updating the Video Book was updated.');
+        \Session::flash('flash_message','Thanks for helping out, the media was updated.');
         return redirect('/books/edit/'.$request->id);
 
     }
@@ -125,9 +123,6 @@ class BookController extends Controller {
 		$book->link = $request->link;
         $book->author_id = $request->author;
         $book->user_id = \Auth::id(); # <--- NEW LINE
-        $book->cover = $request->cover;
-        $book->published = $request->published;
-        $book->purchase_link = $request->purchase_link;
 
         $book->save();
 
@@ -141,7 +136,7 @@ class BookController extends Controller {
         $book->tags()->sync($tags);
 
         # Done
-        \Session::flash('flash_message','Your book was added!');
+        \Session::flash('flash_message','item was added!');
         return redirect('/books');
 
     }
@@ -173,7 +168,7 @@ class BookController extends Controller {
         $book = \App\Book::find($book_id);
 
         if(is_null($book)) {
-            \Session::flash('flash_message','Book not found.');
+            \Session::flash('flash_message','Media not found.');
             return redirect('\books');
         }
 

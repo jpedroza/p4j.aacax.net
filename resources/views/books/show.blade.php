@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Laravel Video Book Library
+    Laravel Media Library
 @stop
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Update the Laravel Video Book 
+    Update the Laravel Media Information 
 @stop
 
 
@@ -62,13 +62,13 @@
 					</div>						
 
 					<div class='form-group'>
-						<label for='author'>* Media Type:</label>
-						<select name='author' id='author'>
-							@foreach($authors_for_dropdown as $author_id => $author_name)
+						<label for='format'>* Media Type:</label>
+						<select name='format' id='format'>
+							@foreach($formats_for_dropdown as $format_id => $format_name)
 
-								{{ $selected = ($author_id == $book->author->id) ? 'selected' : '' }}
+								{{ $selected = ($format_id == $book->format->id) ? 'selected' : '' }}
 
-								<option value='{{ $author_id }}' {{ $selected }}> {{ $author_name }} </option>
+								<option value='{{ $format_id }}' {{ $selected }}> {{ $format_name }} </option>
 							@endforeach
 						</select>
 					</div>
