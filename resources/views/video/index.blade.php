@@ -83,5 +83,7 @@
 					</div><!-- end of col-sm-6 -->	  
 				</div><!-- end of row -->
 		</div><!-- end of jumbotron --> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="js/jquery.webticker.js"></script>
 
 @stop
